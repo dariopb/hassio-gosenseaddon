@@ -1,0 +1,5 @@
+{
+    "name": "GoSense to MQTT addon for HASSIO repository",
+    "url": "https://github.com/dariopb/ha-gosenseapp",
+    "maintainer": "https://github.com/dariopb"
+  }

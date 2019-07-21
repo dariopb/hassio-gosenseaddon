@@ -1,0 +1,39 @@
+{
+    "name": "GoSense-MQTT bridge",
+    "version": "latest",
+    "slug": "folder",
+    "description": "Discover and Publish Sense sensors over MQTT",
+    "arch": ["armv7"],
+    "url": "https://github.com/dariopb/ha-gosenseapp",
+    "startup": "application",
+    "boot": "auto",
+    "full_access": true,
+    "host_network": true,
+    "map": ["config:rw", "ssl"],
+    "environment" : { "CONFIG_FILE" : "/data/options.json" },
+    "options": {
+        "debuglevel": "info",
+        "mqtt": { 
+                "clientid": "",
+                "hostname": "localhost",
+                "user": "",
+                "password": "",
+                "port": 1883,
+                "sensorTopic": "gosense",
+                "discoveryTopic": "gosense_discovery"
+        }
+    },
+    "schema": {
+        "debuglevel": "str",
+        "mqtt": { 
+                "clientid": "str",
+                "hostname": "str",
+                "user": "str",
+                "password": "str",
+                "port": "int",
+                "sensorTopic": "str",
+                "discoveryTopic": "str"
+        }
+    },
+    "image": "dariob/gosenseapp-pi"
+}
